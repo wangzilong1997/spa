@@ -1,7 +1,7 @@
 language: node_js
 
 node_js:
-    - '10.12.0'
+    - 'node'
  
  install:
   - npm install
@@ -14,7 +14,7 @@ script:
   - git config user.name "${USER_NAME}"
   - git config user.email "${USER_EMAIL}"
   - git add .
-  - git commit -m "blog.jzxer.cn"
+  - git commit -m "xingbuxinga"
   - git push --force --quiet "https://${test_token}@${GH_REF}" master:${P_BRANCH}
  branches:
   only:
