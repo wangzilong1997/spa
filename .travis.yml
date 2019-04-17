@@ -6,15 +6,12 @@ node_js:
 install:
   - npm install
 script:
+  - npm test
   - npm run build
- 
-after_script:
-  - git init
-  - git config user.name "${USER_NAME}"
-  - git config user.email "${USER_EMAIL}"
-  - git add .
-  - git commit -m "xingbuxinga"
-  - git push --force --quiet "https://${test_token}@${GH_REF}" master:${P_BRANCH}
-branches:
-  only:
-    - master
+
+deploy:
+  provider:pages
+  skip-cleanup:true
+  github-token:$GITHUB_TOKEN
+  on:
+    branch:master
