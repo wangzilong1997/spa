@@ -1,19 +1,15 @@
 language: node_js
 node_js:
-  - "6"
+  - "node"
 
 after_script:
-  - cd ./dist
-  - git init
-  - git remote add origin https://github.com/wangzilong1997/spa.git
-  - git checkout -b citest
-  - git config user.name "${USER_NAME}"
-  - git config user.email "${USER_EMAIL}"
-  - git add .
-  - git commit -m "ci up"
-  - git push --force --quiet origin citest
-  - wangzilong1997
-  - ${password}
+    - cd ./dist
+    - git init
+    - git config user.name "${USER_NAME}"
+    - git config user.email "${USER_EMAIL}"
+    - git add .
+    - git commit -m "ci test"
+    - git push --force --quiet "https://${GITHUB_TOKEN}@${GH_REF}" master:${BRANCH}
 
 branches:
   only:
