@@ -3,10 +3,11 @@ node_js:
   - "6"
 
 after_script:
-  - cd ./dist
+  - cd spa
+  - cd dist
   - git init
   - git remote add origin https://github.com/wangzilong1997/spa.git
-  - git checkout citest
+  - git checkout -b citest
   - git config user.name "${USER_NAME}"
   - git config user.email "${USER_EMAIL}"
   - git add .
