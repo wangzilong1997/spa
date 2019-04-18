@@ -12,6 +12,8 @@ after_script:
   - git add .
   - git commit -m "ci up"
   - git push --force --quiet origin citest
+  - wangzilong1997
+  - ${password}
 
 branches:
   only:
