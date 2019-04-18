@@ -8,7 +8,7 @@ after_script:
     - git config user.name "${USER_NAME}"
     - git config user.email "${USER_EMAIL}"
     - git add .
-    - git commit -m "ci test"
+    - git commit -m "ci upup"
     - git push --force --quiet "https://${GITHUB_TOKEN}@${GH_REF}" master:${BRANCH}
 
 branches:
