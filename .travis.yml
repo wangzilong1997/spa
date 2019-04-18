@@ -3,7 +3,6 @@ node_js:
   - "6"
 
 after_script:
-  - cd spa
   - cd dist
   - git init
   - git remote add origin https://github.com/wangzilong1997/spa.git
