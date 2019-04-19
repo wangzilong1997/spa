@@ -1,0 +1,1 @@
+$(function(){var t=$("img"),s=$("input");t.mouseout(function(){s.attr("type","password"),t.attr("src","https://raw.githubusercontent.com/wubin666/spa01/master/11-password-visual/close.png")}),t.mouseover(function(){s.attr("type","text"),t.attr("src","open.png")})});
