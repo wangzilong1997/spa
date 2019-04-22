@@ -1,0 +1,1 @@
+$(function(){var l=$("#rectangle-width"),o=$("#rectangle-height");function c(e,a){return Math.round(e*Math.pow(10,a))/Math.pow(10,a)}$(".rectangle form").on("submit",function(e){e.preventDefault();var a=Number(l.val()),r=Number(o.val());console.log(a,r);var t=c(2*a+2*r,2),n=c(a*r,2);console.log(t,n),$("#rectangle-perimeter").val(t),$("#rectangle-area").val(n)})});
