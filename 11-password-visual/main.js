@@ -1,0 +1,1 @@
+$(function(){var t=$("img"),n=$("input");t.mouseout(function(){n.attr("type","password"),t.attr("src","close.png")}),t.mouseover(function(){n.attr("type","text"),t.attr("src","open.png")})});
